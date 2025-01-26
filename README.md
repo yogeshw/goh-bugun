@@ -1,2 +1,1 @@
-# goh-bugun-microsite
-A repository for the Goh Bugun project microsite
+This repository is empty. Any task executed on it should be considered a new capability and needs to be created.
