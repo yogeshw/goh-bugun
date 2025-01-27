@@ -151,3 +151,31 @@ button:hover {
         margin-top: 5px;
     }
 }
+
+/* Improve content hierarchy for SEO */
+article {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Improve text readability */
+p {
+    line-height: 1.6;
+    margin-bottom: 1.2em;
+}
+
+/* Add semantic styling */
+main section {
+    padding: 2em 0;
+}
+
+/* Optimize image alt text display */
+img {
+    font-size: 0.9em;
+    color: #666;
+}
