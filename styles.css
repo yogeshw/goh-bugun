@@ -1,14 +1,14 @@
 /* Define styles for the earthy and vibrant color scheme */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    background-color: #F5E6D3; /* warm parchment */
+    color: #2C1810; /* warm earth brown */
     margin: 0;
     padding: 0;
 }
 
 header, footer {
-    background-color: #4CAF50;
+    background-color: #8B4513; /* deep terracotta */
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -19,7 +19,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #2F4F4F; /* deep forest green */
 }
 
 nav ul li {
@@ -35,7 +35,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #111;
+    background-color: #D2691E; /* rich clay orange */
 }
 
 main {
@@ -43,7 +43,7 @@ main {
 }
 
 h1 {
-    color: #4CAF50;
+    color: #8B4513; /* deep terracotta */
 }
 
 .carousel {
@@ -60,6 +60,17 @@ h1 {
 
 .carousel:hover img {
     transform: scale(1.1);
+}
+
+.feature-image {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.feature-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Ensure styles are responsive for both mobile and desktop screens */
@@ -79,11 +90,11 @@ h1 {
 
 /* Include styles for the navigation bar and interactive elements */
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #D2691E; /* rich clay orange */
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #8B4513; /* deep terracotta */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -97,5 +108,46 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #D2691E; /* rich clay orange */
+}
+
+/* Updated navigation styles */
+.main-nav ul {
+    background-color: #333;
+    margin-bottom: 5px;
+}
+
+.secondary-nav ul {
+    background-color: #556B2F; /* olive green */
+}
+
+.main-nav ul li {
+    display: inline-block;
+}
+
+.secondary-nav ul li {
+    display: inline-block;
+}
+
+.main-nav ul li a {
+    padding: 14px 20px;
+    font-weight: bold;
+}
+
+.secondary-nav ul li a {
+    padding: 10px 15px;
+    font-size: 0.9em;
+}
+
+/* Update responsive styles */
+@media (max-width: 600px) {
+    .main-nav ul li,
+    .secondary-nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    .secondary-nav ul {
+        margin-top: 5px;
+    }
 }
