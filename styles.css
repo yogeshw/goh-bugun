@@ -260,3 +260,16 @@ img {
     font-size: 0.9em;
     color: #666;
 }
+
+/* Center the video container and its contents */
+.video-container {
+    text-align: center;
+    width: 100%;
+    margin: 2em auto;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
