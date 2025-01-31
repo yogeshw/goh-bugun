@@ -49,15 +49,21 @@ h1 {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 960px; /* Increased from 800px */
+    max-width: 1440px; /* Increased from 1152px by ~25% */
     margin: 20px auto;
+    height: 780px; /* Increased from 520px by 50% */
+    overflow: hidden; /* Contain everything */
 }
 
 .carousel-container {
     position: relative;
-    overflow: hidden;
-    min-height: 540px; /* Increased to accommodate caption */
-    background: #000000; /* Changed from #f5f5f5 to black */
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Removed padding to maximize image space */
 }
 
 .carousel-slide {
@@ -80,23 +86,7 @@ h1 {
 }
 
 .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.carousel-btn.prev {
-    left: 10px;
-}
-
-.carousel-btn.next {
-    right: 10px;
+    display: none; /* Hide the navigation buttons */
 }
 
 .carousel figure {
@@ -111,13 +101,16 @@ h1 {
 
 .carousel figure.carousel-slide {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
+    height: calc(100% - 60px); /* Adjusted space for caption */
+    margin: 0;
+    padding: 0;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Changed to space-between */
 }
 
 .carousel figure.carousel-slide.active {
@@ -125,26 +118,23 @@ h1 {
 }
 
 .carousel figure.carousel-slide img {
-    max-width: 100%;
-    max-height: 400px;
+    max-width: 90%;
+    max-height: calc(100% - 80px); /* Adjusted to leave space for caption */
     width: auto;
     height: auto;
     object-fit: contain;
-    display: block;
-    margin: 0 auto;
+    margin: 20px auto 0; /* Added top margin, auto horizontal margins */
 }
 
 .carousel figcaption {
-    position: absolute;
-    bottom: -60px;
-    left: 0;
+    position: relative; /* Changed from absolute */
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
-    font-size: 0.9em;
-    z-index: 10;
+    font-size: 1.2em;
+    margin-top: auto; /* Pushes caption to bottom */
 }
 
 .feature-image {
@@ -262,7 +252,7 @@ p {
 
 /* Add semantic styling */
 main section {
-    padding: 2em 0;
+    padding: 2em 0 1em; /* Reduced bottom padding */
 }
 
 /* Optimize image alt text display */
