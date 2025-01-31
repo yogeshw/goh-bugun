@@ -49,15 +49,14 @@ h1 {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 960px; /* Increased from 800px */
     margin: 20px auto;
 }
 
 .carousel-container {
     position: relative;
     overflow: hidden;
-    /* Remove fixed aspect-ratio to allow dynamic sizing */
-    min-height: 400px;
+    min-height: 480px; /* Increased from 400px */
     background: #f5f5f5;
 }
 
@@ -67,12 +66,13 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 100%;
-    max-height: 100%;
+    max-height: 480px; /* Added explicit max-height */
     width: auto;
     height: auto;
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    margin-bottom: 10px;
 }
 
 .carousel-slide.active {
@@ -97,6 +97,28 @@ h1 {
 
 .carousel-btn.next {
     right: 10px;
+}
+
+.carousel figure {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.carousel figcaption {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.9em;
 }
 
 .feature-image {
