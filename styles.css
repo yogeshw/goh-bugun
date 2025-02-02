@@ -274,46 +274,59 @@ img {
     display: block;
 }
 
-/* Remove ALL previous dropdown styles and replace with these */
+/* Clear all previous dropdown styles and replace with these */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
 .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
+    display: block;
     padding: 14px 20px;
+    color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    top: 100%;
+    left: 0;
     min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 9999;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover > .dropdown-content {
     display: block;
+}
+
+.dropdown-content li {
+    float: none;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
-    text-decoration: none;
     display: block;
+    text-decoration: none;
     text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .dropdown-content a:hover {
     background-color: #D2691E;
 }
 
-/* Footer dropdown appears above instead of below */
+/* Footer dropdown positioning */
 footer .dropdown-content {
     bottom: 100%;
     top: auto;
@@ -321,11 +334,12 @@ footer .dropdown-content {
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
-    .dropdown {
+    .dropdown-content {
+        position: static;
         width: 100%;
     }
-    .dropdown-content {
-        position: relative;
+    
+    .dropdown {
         width: 100%;
     }
 }
@@ -335,5 +349,12 @@ footer .dropdown-content {
     .dropdown-content {
         position: static;
         width: 100%;
+    }
+}
+
+/* Force dropdown display on hover for desktop screens */
+@media (min-width: 601px) {
+    .dropdown:hover > .dropdown-content {
+        display: block;
     }
 }
