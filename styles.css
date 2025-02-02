@@ -339,7 +339,7 @@ footer .dropdown-content {
     background-color: #f1f1f1;
 }
 
-/* Reset and update dropdown styles */
+/* Clean dropdown styles - remove duplicates and fix hover behavior */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -361,8 +361,8 @@ footer .dropdown-content {
     z-index: 1000;
 }
 
-.dropdown:hover > .dropdown-content,
-.dropdown:focus-within > .dropdown-content {
+/* Show dropdown ONLY on hover */
+.dropdown:hover > .dropdown-content {
     display: block;
 }
 
@@ -372,26 +372,23 @@ footer .dropdown-content {
     color: white;
     text-decoration: none;
     text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .dropdown-content a:hover {
     background-color: #D2691E;
 }
 
-/* Footer dropdown appears above instead of below */
+/* Footer dropdown appears above */
 footer .dropdown-content {
     bottom: 100%;
     top: auto;
 }
 
+/* Mobile adjustments */
 @media (max-width: 600px) {
     .dropdown-content {
         position: static;
-        display: none;
         width: 100%;
-    }
-    
-    .dropdown:hover > .dropdown-content {
-        display: block;
     }
 }
