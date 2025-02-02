@@ -41,5 +41,5 @@ document.addEventListener('DOMContentLoaded', function() {
     nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
 
     // Auto advance slides every 5 seconds
-    setInterval(() => showSlide(currentSlide + 1), 5000);
+    setInterval(() => showSlide(currentSlide + 1), 7000);
 });
