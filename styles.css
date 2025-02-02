@@ -274,31 +274,29 @@ img {
     display: block;
 }
 
-/* Replace ALL dropdown styles with just these */
+/* Remove ALL previous dropdown styles and replace with these */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-.dropdown > a {
-    display: block;
+.dropbtn {
+    display: inline-block;
     color: white;
-    text-decoration: none;
+    text-align: center;
     padding: 14px 20px;
+    text-decoration: none;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
     background-color: #333;
     min-width: 200px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 9999;
 }
 
-/* Critical hover selector */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -315,10 +313,21 @@ img {
     background-color: #D2691E;
 }
 
-/* Footer dropdown positioning */
+/* Footer dropdown appears above instead of below */
 footer .dropdown-content {
     bottom: 100%;
     top: auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .dropdown {
+        width: 100%;
+    }
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+    }
 }
 
 /* Mobile styles */
