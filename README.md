@@ -10,21 +10,23 @@ The Goh Bugun project aims to revive Bugun Heritage crafts and create confidence
 - Sustainable development
 - Community engagement
 
+Recent updates include an earthy and vibrant styling theme with optimized carousel dimensions and updated navigation design for improved responsiveness.
+
 ## Project Structure
 
 ```
 goh-bugun/
-├── index.html          # Main landing page
-├── research.html       # Research documentation
-├── remember.html       # Cultural memory preservation
-├── revive.html         # Craft revival initiatives
-├── reconnect.html      # Community reconnection
-├── brandandicon.html   # Brand identity and story
+├── index.html            # Main landing page
+├── research.html         # Research documentation
+├── remember.html         # Cultural memory preservation
+├── revive.html           # Craft revival initiatives
+├── reconnect.html        # Community reconnection
+├── brandandicon.html     # Brand identity and story
 ├── incubationcentre.html # The Craft Centre
-├── images/            # Project images and media
-├── js/               # JavaScript files
-│   └── carousel.js    # Image carousel functionality
-└── styles.css        # Project styling
+├── images/               # Project images and media
+├── js/                   # JavaScript files
+│   └── carousel.js       # Carousel functionality
+└── styles.css            # Updated styling (earthy color scheme, enhanced carousel and navigation)
 ```
 
 ## Features
