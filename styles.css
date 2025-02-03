@@ -146,8 +146,8 @@ h1 {
 
 .feature-image {
     width: 100%;
-    height: 80vh;
-    margin: 20px auto;
+    height: 40vh;
+    margin: 1px auto;
     display: flex;
     align-items: center;
     justify-content: center;
