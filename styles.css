@@ -7,6 +7,10 @@ body {
     padding: 0;
 }
 
+body .carousel-container img {
+    object-fit: contain !important;
+}
+
 header, footer {
     background-color: #8B4513; /* deep terracotta */
     color: white;
