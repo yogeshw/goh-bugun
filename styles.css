@@ -111,10 +111,12 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: space-between; /* Changed to space-between */
+    z-index: 0; /* Ensure inactive slides are behind */
 }
 
 .carousel figure.carousel-slide.active {
     opacity: 1;
+    z-index: 1; /* Bring active slide to front */
 }
 
 .carousel figure.carousel-slide img {
